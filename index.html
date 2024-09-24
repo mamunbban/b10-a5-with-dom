@@ -25,7 +25,7 @@
 <body>
    <header class="sticky top-0 z-50 ">
      <!-- Nav Section -->
-     <section class=" bg-[#F9F7F3] shadow-sm ">
+     <section class=" bg-[#F9F7F3] shadow-sm  ">
         <div class=" navbar lg:w-10/12 w-full mx-auto lg:pb-12 lg:pt-6">
             <div class="navbar-start">
                 <button class="btn bg-primary lg:px-5 lg:text-xl font-semibold"><a href="./blog.html">Blog</a></button>
@@ -52,10 +52,11 @@
      </section>
    </header>
 
-   <main id="donate-form">
+   <main>
 
-    <!-- Donation Card-1 -->
-    <section class="w-10/12 mt-12 mx-auto border border-solid-6 shadow-xl rounded-lg p-6 ">
+ <section id="donate-form">
+     <!-- Donation Card-1 -->
+     <section class="w-10/12 mt-12 mx-auto border border-solid-6 shadow-xl rounded-lg p-6 ">
 
       <div class="card lg:card-side bg-base-100  ">
         <img src="images/noakhali.png" alt="">
@@ -70,14 +71,16 @@
             <input id="input-donate-noakhali" class="w-full p-2 border rounded-md" type="text" placeholder="Write Donation Amount">
             <button id="btn-donate-noakhali" class="btn bg-primary w-full text-xl font-bold  ">Donate Now</button>
             <!-- Modal here -->
-            <dialog id="my_modal_1" class="modal">
+            <dialog id="my_modal_1" class="modal text-center">
               <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
+                <h3 class="text-5xl font-bold mb-12">Congrats!</h3>
+                
+                <p class="py-4">You Have Donated for Humakind</p>
+                <h2 class="text-xl font-semibold">Successfully</h2>
                 <div class="modal-action">
                   <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
+                    <button class="btn">close confirmation </button>
                   </form>
                 </div>
               </div>
@@ -125,14 +128,17 @@
         </div>
       </div>
     </section>
+ </section>
 
        <!-- Features start -->
        <div id="history-form" class="">
+        
 
-        <h1>Transaction History </h1>
+        <h1 class="text-2xl font-semibold text-center">Transaction History </h1>
         <div id="history-container"></div>
       </div>
       <!-- Features end --> 
+      
 
    
    </main>

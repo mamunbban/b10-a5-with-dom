@@ -4,7 +4,11 @@ document.getElementById('show-donate-form')
         showButtonBg('show-history-data')
       })
 
-      document.getElementById('show-history-data').addEventListener('click', function(){
-       showButtonBg('show-donate-form')
-        showSectionById('history-form')
-      })
+document.getElementById('show-history-data')
+          .addEventListener('click', function(){
+            showSectionById('history-form')
+            showButtonBg('show-donate-form')
+
+})
+
+
