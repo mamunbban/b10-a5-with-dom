@@ -10,7 +10,6 @@ document.getElementById('btn-donate-noakhali')
      
      document.getElementById('dynamic-balance').innerText = newBalanceFinal
     
-     
 
 
      const mainBalance = getTextValueById('main-balance-noakhali')
