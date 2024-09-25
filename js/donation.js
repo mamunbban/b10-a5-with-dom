@@ -11,20 +11,48 @@ document.getElementById('btn-donate-noakhali')
 
      if(isNaN(donateNumber) || donateNumber <= 0 ){
       
-      alert('invalid input number')
+      
+      alert('invalid donate amount')
       return false
      }
+     
      else{
       document.getElementById('my_modal_1').showModal()
      }
 
      const newBalance =  donateNumber + mainBalance 
      document.getElementById('main-balance-noakhali').innerText = newBalance
-    
 
-     
      const dynamicBalance = getTextValueById('dynamic-balance')
      const newBalanceFinal = dynamicBalance - donateNumber
+
+     if(donateNumber > newBalanceFinal){
+      alert('insufficient balance')
+      
+      document.getElementById('my_modal_1').classList.add('hidden')
+      return
+
+   }
+   else{
+       //add to transaction history
+       const p = document.createElement('p');
+       p.style.background = 'gray'
+       p.style.color = 'white'
+       p.style.padding = '12px'
+       p.style.width = 'fit-content'
+       p.style.margin = 'auto'
+       p.style.alignContent = 'center'
+       p.innerText = ` ${donateNumber} Taka is Donated For famine-2024 at Noakhali, Bangladesh
+       
+       `;
+       const date = new Date().toLocaleString();
+       const update = document.createElement('li');
+       update.innerText = `${date}`;
+       p.appendChild(update)
+
+       //should be a common function
+       document.getElementById('history-container').appendChild(p)
+   }
     
     
     
@@ -46,8 +74,14 @@ document.getElementById('btn-donate-feni')
       
             alert('invalid input number')
             return false
+            
+
            }
+           
+          
+          
            else{
+     
             document.getElementById('my_modal_1').showModal()
            }
 
@@ -56,9 +90,40 @@ document.getElementById('btn-donate-feni')
 
          const dynamicBalance = getTextValueById('dynamic-balance')
      const newBalanceFinal = dynamicBalance - donateNumber
+     
+     if(donateNumber > newBalanceFinal){
+      alert('insufficient balance')
+      
+      document.getElementById('my_modal_1').classList.add('hidden')
+      return
+
+   }
+   else{
+       //add to transaction history
+       const p = document.createElement('p');
+       p.style.background = 'gray'
+       p.style.color = 'white'
+       p.style.padding = '12px'
+       p.style.width = 'fit-content'
+       p.style.margin = 'auto'
+       p.style.alignContent = 'center'
+       p.innerText = ` ${donateNumber} Taka is Donated For famine-2024 at Feni, Bangladesh
+       
+       `;
+       const date = new Date().toLocaleString();
+       const update = document.createElement('li');
+       update.innerText = `${date}`;
+       p.appendChild(update)
+
+       //should be a common function
+       document.getElementById('history-container').appendChild(p)
+   }
+
      document.getElementById('dynamic-balance').innerText = newBalanceFinal
 
-
+      
+         
+      
 
 
       })
@@ -86,6 +151,36 @@ document.getElementById('btn-donate-quota')
 
    const dynamicBalance = getTextValueById('dynamic-balance')
 const newBalanceFinal = dynamicBalance - donateNumber
+
+if(donateNumber > newBalanceFinal){
+   alert('insufficient balance')
+   document.getElementById('my_modal_1').classList.add('hidden')
+   return
+   
+   
+
+}
+else{
+    //add to transaction history
+    const p = document.createElement('p');
+    p.style.background = 'gray'
+    p.style.color = 'white'
+    p.style.padding = '12px'
+    p.style.width = 'fit-content'
+    p.style.margin = 'auto'
+    p.style.alignContent = 'center'
+    p.innerText = ` ${donateNumber} Taka is Donated For Aid for Injured in the Quota Movement , Bangladesh
+    
+    `;
+    const date = new Date().toLocaleString();
+    const update = document.createElement('li');
+    update.innerText = `${date}`;
+    p.appendChild(update)
+
+    //should be a common function
+    document.getElementById('history-container').appendChild(p)
+}
+
 document.getElementById('dynamic-balance').innerText = newBalanceFinal
 
 
